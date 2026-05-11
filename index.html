@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Encryption Tool</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Web-Based Text Encryption Tool</h1>
+
+  <textarea id="inputText" placeholder="Enter text"></textarea>
+
+  <select id="algorithm">
+    <option value="">Select Algorithm</option>
+    <option value="caesar">Caesar Cipher</option>
+    <option value="aes">AES</option>
+    <option value="base64">Base64</option>
+    <option value="sha256">SHA-256</option>
+  </select>
+
+  <input type="password" id="key" placeholder="Enter key (for AES or Caesar)">
+
+  <div class="buttons">
+    <button onclick="encryptText()">Encrypt</button>
+    <button onclick="decryptText()">Decrypt</button>
+    <button onclick="copyText()">Copy</button>
+  </div>
+
+  <textarea id="outputText" placeholder="Result" readonly></textarea>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
